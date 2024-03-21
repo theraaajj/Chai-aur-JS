@@ -1,4 +1,4 @@
-// Primitive
+// Primitive  (Call By Value) : (ek duplicate copy acccess kar paate hain)
 // 7 types: STring, Number, Null, Boolean, Undefined, Symbol, BigInt
 
 const score = 100           //number
@@ -17,7 +17,7 @@ console.log(id===anotherId);   //false
 const bigNmbr = 1395736536313124n  //this is a BigInt DataType
  
 
-//Reference/NonPrimitive
+//Reference/NonPrimitive  (Call By Reference) : (original data ka reference/address milta hai)
 //Array, Objects, Fucntions
 
 const heros = ["shaktimaan", 'naagraj', "doga"]    //array
@@ -30,3 +30,30 @@ let myObj = {
 let myFunc = function(){
     console.log("Hello World")          //function
 }
+
+
+
+
+//++++++++++++++++++++Memory+++++++++++++++++++++++++
+
+// Stack (primitive datatype)
+// Heap   (non-primitive datatype)
+
+let myInstaName = "theraaajj"   //stored as a stack
+let myDigitalName = myInstaName
+ //myDigitalName ko ek copy mil gaya myInstaName ka
+ //if we make a change or delete myDigitalName, myInstaName won't get affected.
+
+ let objOne = {
+    email: "user@google.co.com",
+    upi: "raj@ybl"
+ }
+
+ let objTwo = objOne
+
+ //ab yaha objTwo directly refers the value of objOne stored in the actual memory, so a change or deletion of objTwo will equally affect the value of objOne.
+
+ objTwo.email = "raj@google.com"
+
+ console.log(objTwo.email);   //both are changed toh raj@google.com
+ console.log(objOne.email);
