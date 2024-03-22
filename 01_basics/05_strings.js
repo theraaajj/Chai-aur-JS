@@ -17,3 +17,34 @@ const myname =  new String ("RAJ ARYAN")
 // console.log(myname.toLowerCase());
 console.log(myname.charAt(5));
 console.log(myname.indexOf("N"));
+
+//substring function
+const newString = myname.substring(0, 4)
+console.log(newString);
+
+//slice function
+const anotherString1 = myname.slice(0, 4)
+console.log(anotherString1);
+
+const anotherString2 = myname.slice(-8, 4)
+console.log(anotherString2);
+
+const anotherString4 = myname.slice(-8, 6)
+console.log(anotherString4);
+
+const anotherString3 = myname.slice(-8, -6)
+console.log(anotherString3);
+
+//trim function
+const value = "    raj aryan    "
+console.log(value);
+console.log(value.trim());                  //trimStart and trimEnd
+
+//replace function
+const url = "https://theraaajj.com/raj%20aryan"
+
+console.log(url.replace('%20', '-'))
+
+console.log(url.includes('raj'))             //kya url me raj keyword hai kahi?
+
+console.log(url.split('r'))                 //jaha bhi r aaye waha se split krdo naye word me, aur ek array me pura store kardo    
