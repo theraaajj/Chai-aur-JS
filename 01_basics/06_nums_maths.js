@@ -22,3 +22,25 @@ console.log(hundreds.toLocaleString('en-IN'))   //represents the number accordin
 console.log("Results of MATHs starts from here!")
 //++++++++++++++++++++++ MATHS ++++++++++++++++++++++++
 
+console.log(Math);           //so this is an object in javascript
+//therefore it also has a number of functions it can use!
+
+console.log(Math.abs(-4));
+console.log(Math.round(4.6));
+console.log(Math.ceil(4.2));
+console.log(Math.floor(4.2));
+console.log(Math.min(4, 6, 4, 5, 6,8,9,2));
+console.log(Math.max(4, 6, 4, 5, 6,8,9,2));
+
+
+console.log(Math.random());              //random value between 0 & 1
+console.log(Math.random()*10);     
+console.log((Math.random()*10) + 1);     //do this in case you don't need a 0(zero) as an output.
+console.log(Math.floor(Math.random()*10) + 1)
+
+
+//suppose wo random number chahie kisi 2 particular numbers ke bich me hi then?
+const min = 10
+const max = 20
+
+console.log(Math.floor(Math.random() * (max - min + 1)) + min)          //VERY VERY IMPORTANT
