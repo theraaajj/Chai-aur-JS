@@ -40,7 +40,7 @@ console.log(Math.floor(Math.random()*10) + 1)
 
 
 //suppose wo random number chahie kisi 2 particular numbers ke bich me hi then?
-const min = 10
+const min = 15
 const max = 20
 
 console.log(Math.floor(Math.random() * (max - min + 1)) + min)          //VERY VERY IMPORTANT
