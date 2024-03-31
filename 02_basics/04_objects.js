@@ -58,3 +58,21 @@ console.log(Object.entries(tinderUser));         //gives all the key:value pairs
 //to check if a property/key is present!
 console.log(tinderUser.hasOwnProperty('isLoggedIn'))
 console.log(tinderUser.hasOwnProperty('isLoggedOut'))
+
+
+
+const course = {
+    name: 'js in hindi',
+    fee: 999,
+    teacher: 'Hitesh'
+}
+
+// course.teacher        //accessing the key
+
+//another way syntactically!
+const {teacher} =  course             //extracting teacher from obj course
+console.log(teacher);
+
+//suppose you don't like the name 'teacher', then we destructure! *************************
+const {teacher: instructor} = course
+console.log(instructor)               //now can access the same value of teacher using instructor
