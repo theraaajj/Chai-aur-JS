@@ -12,7 +12,7 @@ const dceu = ['superman', 'batman', 'aquaman', 'wonder woman']
 // console.log(allHeros);
 
 // this same thing is done easily by a spread operator, eithout a limitation to the no. of arrays to be merged
-const allNewHeros = [...mcu, ...dceu]        //due to dots all elements are spread in the new array
+const allNewHeros = [...mcu, ...dceu]                             //due to dots all elements are spread in the new array
 console.log(allNewHeros);
 
 const myArray = [1, 2, 3, [4, 5, 6], 7, [6, 7, [4, 5]]]           //a multi-depth array

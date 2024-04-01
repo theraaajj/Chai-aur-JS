@@ -69,7 +69,7 @@ const course = {
 
 // course.teacher        //accessing the key
 
-//another way syntactically!  
+//another way syntactically!
 const {teacher} =  course             //extracting teacher from obj course
 console.log(teacher);
 
