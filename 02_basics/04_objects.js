@@ -76,3 +76,32 @@ console.log(teacher);
 //suppose you don't like the name 'teacher', then we destructure! *************************
 const {teacher: instructor} = course
 console.log(instructor)               //now can access the same value of teacher using instructor
+
+
+
+// how does API work?
+// basically it sends data in the form of object without a name (generally)
+// which we store in our objects
+
+// or in the form if an array of objects.
+
+
+// 1.   [JSON]
+// {
+//     "name" = "raj"
+//     "coursename" = "JS in Hindi"
+//     "price" = "free"
+// }
+
+// to see an example search randomuser api and copy it
+// then search JSON formatter and paste it there
+// you will know the results of that API call. ********************************
+
+
+
+// 2.
+[
+    {}
+    {}
+    {}
+]
