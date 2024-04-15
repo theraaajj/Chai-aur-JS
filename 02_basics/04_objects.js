@@ -100,8 +100,8 @@ console.log(instructor)               //now can access the same value of teacher
 
 
 // 2.
-[
-    {}
-    {}
-    {}
-]
+// [
+//     {}
+//     {}
+//     {}
+// ]
