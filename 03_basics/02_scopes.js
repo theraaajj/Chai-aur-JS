@@ -42,5 +42,5 @@ addOne(5)
 // here the function is declared as a variable so it can't be accessed before the declaration
 addTwo(5)
 const addTwo = function(){
-    return num + 2
+    return num + 2 
 }
