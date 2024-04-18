@@ -14,7 +14,7 @@ myObj.welcomeMsg()
 myObj.username = "aryan"
 myObj.welcomeMsg()
 
-
+//......................................................................................
 // let's see what changes due to this
 const myObj2 = {
     username: "raj",
@@ -33,6 +33,27 @@ myObj2.welcomeMsg()
 
 
 // if this console.log(this) is executed outside the obj then it will give empty {}, due to it's scope!
-console.log(this);
+// console.log(this);
 
 // ++++++++++++++++++++++++++browser ke andar ek global object hota hai and that is "window"++++++++++++++++++++
+// .......................................................
+function chai(){
+    console.log(this);
+}                  
+
+chai()                   
+//prints a lot of things
+
+// .......................................................
+const one = function(){
+    let name = "Raj"
+    console.log(this.username);             //undefined. bcz this function works only in objects and not functions.
+}
+one()
+
+// now we learn to make a arrow function!
+const onee = () => {                        // this is how to make an arrow function.
+    let username = "raj aryan"
+    console.log(this.username);             // still gives undefined being a function
+}
+
