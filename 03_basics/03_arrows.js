@@ -57,3 +57,20 @@ const onee = () => {                        // this is how to make an arrow func
     console.log(this.username);             // still gives undefined being a function
 }
 
+// basic aarrow func syntax 
+// () => {}
+// can hold this in a name of variable
+
+const hiname = (num1, num2) => {
+    return num1 + num2                       // explicit return
+}
+console.log(hiname(2, 6));
+
+const hiname2 = (num1, num2) => num1 + num2      // implicit return (agar ek line ka code ho)
+console.log(hiname2(5, 6));
+
+
+const hiname3 = (num1, num2) => ({username: "RAJ"})      //kese bhi 2 number ke input pe ye object ko print karega. object hai isliye small brackets me enclosed hai
+console.log(hiname3(5, 6));
+
+
