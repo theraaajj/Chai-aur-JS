@@ -52,7 +52,6 @@ function userLoginMsg (username) {
 
 console.log (userLoginMsg("Raj Aryan"))      // Raj Aryan just logged in.
 console.log (userLoginMsg())                 // undefined just logged in.
-  
 
 
 // to cancel out msg if no name is entered **********************************
