@@ -47,4 +47,5 @@ console.log(url.replace('%20', '-'))
 
 console.log(url.includes('raj'))             //kya url me raj keyword hai kahi?
 
-console.log(url.split('r'))                 //jaha bhi r aaye waha se split krdo naye word me, aur ek array me pura store kardo    
+console.log(url.split('r'))  
+               //jaha bhi r aaye waha se split krdo naye word me, aur ek array me pura store kardo    
