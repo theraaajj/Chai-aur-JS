@@ -14,7 +14,7 @@ console.log(val3);
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // TERNIARY OPERATOR
-//condition ? true : false
+//condition ? true : false 
 
 const iceTeaPrice = 100
 iceTeaPrice >= 88 ? console.log("less than 80"): console.log("more than 80")
