@@ -43,6 +43,6 @@ if (Object.keys(emptyObj).length === 0){
 
 
 // can be asked in interviews
-// false == 0      is true
-// false == ''     is true
-// 0 == ''         is true
+// false == 0      is true.
+// false == ''     is true.
+// 0 == ''         is true.
