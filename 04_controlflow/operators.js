@@ -13,7 +13,7 @@ console.log(val3);
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-// TERNIARY OPERATOR
+// TERNIARY OPERATOR SYNTAX
 //condition ? true : false 
 
 const iceTeaPrice = 100
