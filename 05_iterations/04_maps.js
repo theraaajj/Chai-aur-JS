@@ -41,4 +41,3 @@ for (const [key, value] of myVar) {
 
 // maps are not iterable by for in loops
                 
-  
