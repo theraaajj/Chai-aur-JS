@@ -6,7 +6,7 @@ const myVar = new Map()
 myVar.set('IN', "india")
 myVar.set('US', "united states of america")
 myVar.set('FR' , "france")
-// myVar.set('IN', "india")             // doesn't get a entry in the map was it is duplicate
+// myVar.set('IN', "india")             // doesn't get a entry in the map as it is duplicate
 // myVar.set('IN', "INDIA")
              // value gets updated
 // console.log(myVar);
@@ -40,4 +40,3 @@ for (const [key, value] of myVar) {
                 }
 
 // maps are not iterable by for in loops
-                
