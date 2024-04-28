@@ -26,3 +26,19 @@ console.log(`${abc} is shorcut for ${anObj[abc]}`)
 }
 
  // objects are iterable using "for in" loops, and not "for of" loops
+console.log("**********************************************");
+//  will this "for in" loop work for an array?
+const myArray = [1, 2, 3 , 4 , 5]
+for (const x in myArray) {
+    // console.log(x);                  // prints the index, i.e. the key
+    // console.log(myArray[x]);         // print the values
+    console.log(`the value at index ${x} is ${myArray[x]}`);
+}
+
+
+
+
+
+
+// major difference in for in and for of is
+// for of give

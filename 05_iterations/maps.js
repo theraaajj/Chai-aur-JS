@@ -33,6 +33,12 @@ for (const [key, value] of myVar) {
                 // US :- united states of america
                 // FR :- france
 
-            
+                for (const [key] of myVar) {
+                    console.log(key);              // only keys
+
+
+                }
+
+// maps are not iterable by for in loops
                 
   
