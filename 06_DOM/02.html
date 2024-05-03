@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai aur Code</title>
+    
+</head>
+<body style="background-color: black; color: antiquewhite;">
+        <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursdaay</div>
+    </div>
+</body>
+<script>
+    const father = document.querySelector('.parent')
+    // console.log(father);
+    // console.log(father.children);
+    //gives an HTML collection of all the children the father, which is almost a arrray like element.
+    // console.log(father.children[0]);
+
+    // chalo iss collection pe loop lagaye. but forEach toh nhi chlega naa, jaaa! areh toh apna classic for loop toh chalega na
+    for (let i = 0; i < father.children.length; i++) {
+        console.log(father.children[i].innerHTML);
+    }
+   
+
+    // TRAVERSING ACROSS PARENT & CHILD
+    
+  father.children[1].style.color = "orange"
+  console.log(father.firstElementChild);         // accessed the child from parent
+  console.log(father.lastElementChild);
+
+  const dayOne = document.querySelector('.day')
+  console.log(dayOne.parentElement);             // accessed the parent from child
+
+  console.log(dayOne.nextElementSibling.innerHTML)   // accessed next sibling from children
+
+  console.log("NODES: ", father.childNodes)           // gives a NodeList... pura tree structure ka hi dega.. that's why wha (9) likha hai coz it includes even the line break(by hitting ENTER) as a text node
+  
+  
+</script>
+</html>
