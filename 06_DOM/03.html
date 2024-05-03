@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chai  Aur Code</title>
+    <title>Chai  Aur Code and creating a new elem in DOM</title>
 </head>
 <body style="background-color: rgb(70, 68, 68); color: antiquewhite;">
     
@@ -11,5 +11,22 @@
 <script>
     const div = document.createElement("div")     // or h1 or h2, anything
     console.log(div)
+    div.className = "main"
+    div.id = Math.round(Math.random() * 10 + 1)
+    div.setAttribute("title", "generated-title")       // custom attribute
+    div.style.backgroundColor = "green"
+    div.style.padding = "12px"
+
+    // ab abtk toh kuch div me likhe hi nhi hai, isliye document page me show nhi hoga... bas memory me ye div aur uske attributes etc stored hain.
+    // div.innerText = "Raj Aryan"     // phle toh fetch krega innerText aur tab overwrite karega
+    const addText = document.createTextNode("Raj Aryan")
+    div.appendChild(addText)
+
+    // attaching this div to the document using JS
+    document.body.appendChild(div)
+
+    // ab ye jo pura upar kiye hai, isko ek funtion() me bhi toh wrap karke reuse kar sakte hai!
+    // parameters pass karte jayenge aur naya body me children add hote jayenge.. isn't it??
+
 </script>
 </html>
