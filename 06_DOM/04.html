@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Code | DOM</title>
+</head>
+<body style="background-color: black; color: beige;">
+    <p>We learn here to add new elements and edit or delete the existing ones.</p>
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addLang(LangName) {
+       const li = document.createElement('li');
+       li.innerHTML = `${LangName}`        // first fetches the innerHTML by traversing the whole tree and then overwrites, therefore needs optimization
+
+       document.querySelector('.language').appendChild(li)
+    }
+    addLang("Python")
+    addLang("typescript")
+
+    // bigger projects ke liye
+    // function optimisedWay(lang) {
+    //     const lis = document.createElement('li')
+    //     lis.appendChild(document.creatTextNode(lang))
+    //     document.querySelector('.language').appendChild(lis)
+    //  }
+     
+    //  optimisedWay("golang")
+
+
+
+    // EDITING Elements:
+    // 1. 
+    const SecondLang =  document.querySelector("li:nth-child(2)")
+    // SecondLang.innerHTML = "mojo"             not an optimised approach
+    const newLi = document.createElement('li')
+    newLi.textContent = "mojo"
+    SecondLang.replaceWith(newLi)
+
+    // 2.
+    const noJS = document.querySelector("li:first-child")
+    noJS.outerHTML = "<li>TypeScript</li>"
+
+    // REMOVE Elements:
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+</script>
+</html>
