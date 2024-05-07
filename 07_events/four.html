@@ -1,0 +1,51 @@
+<!-- // ASYNC in JS  (setTimeout(), setTimeInterval()) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur Code</h1>
+    <button id= 'stop'>STOP</button>
+</body>
+<script>
+    // setTimeout() : given time ke baad ek baar execute kardega cmnd/func
+    // setInterval() : given time pe interval lekr multiple times karte rhega function execute 
+
+    setTimeout(function(){
+        console.log("raj")
+    }, 2000)        //time millisecs me hota hai, isliye yaha 2sec diye hain
+
+
+    const name = function(){
+        console.log('raj')
+    }
+    setTimeout(name, 2000)
+
+
+    // document.querySelector('h1').innerHTML = "Raj aur Code"
+    // ab agar ye change bhi 2 sec baad chahie ho toh kaise vro?
+
+     const changeText = function(){
+        document.querySelector('h1').innerHTML = "Raj aur Code"
+        }
+        const stopme = setTimeout(changeText, 3000)  
+
+    // WooHooooooo!!!!!
+
+    // ab isi Timeout ko rokne ke liye clearTimeout hota hai 
+    // toh usko ek reference pas karte hain ki konsa timeout ko rokna hai
+    // toh chalo ek button laga kar rokte hain. 
+    // warna fayda hi kya ki ek line me lagaye aur agle me hata De 
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(stopme)
+    })
+    // ab stop button click kardenge toh change nahi hoga chai aur code to raj aur code
+    // yeheeeeeeeee
+
+    
+</script>
+</html>
