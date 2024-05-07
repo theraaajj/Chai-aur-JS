@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Events</title>
+    <title>HTML Events : event propagation, bubbling, capturing</title>
 </head>
 <body style="background-color: #414141; color: aliceblue;">
     <h2>Amazing image</h2>
@@ -28,14 +28,35 @@
 
     // attachEvent().... another approach, not much needed.
 
-    // best approach
-    document.getElementById('owl').addEventListener('click', function(e){
-        console.log(e)
-    }, false);            // false default hota hai, wo likhna anivarya hai
-    
     // type (mouse event hai ya keyboard h ya kch aur) , 
     // timeStamp (time jab event occur hua ya click hua ya date activity), 
     // defaultPrevented (default behaviour prevent karta hai element ka...)
+    // target, toElement
+    // srcElement, currentTarget      (important)
+    // clientX , clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+
+    // best approach
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log("clicked inside the ul")
+    }, false);            // false default hota hai, wo likhna anivarya hai... meant for event propagation
+
+    document.getElementById('owl').addEventListener('click', function(e){
+        console.log("owl clicked")
+        e.stopPropagation()
+    }, false);  
+    
+    // false for event bubbling : mtlb phle owl wla print hoga console pr, aur tab images wala 
+    // true for event capturing : just the opposite
+    // importantttttttttttt
+
+     // preventDefault
+     document.getElementById('google').addEventListener('click', function(e){
+        e.preventDefault()
+        e.stopPropagation()
+        console.log('clicked google')
+     }, false)
 
 </script>
 </html>

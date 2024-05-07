@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events : event spillover, remove etc</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>      
+            <!-- onclick alert isme direct bhi add krskte but ye practice bilkul acha nhi hai, kyuki large scale appln me problem bhot create hogi isse! -->
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+   
+   document.querySelector('#images').addEventListener('click', function(e){
+    // console.log(e)
+    // console.log(e.target)
+    // console.log(e.target.parentNode);
+
+    //    let removeIt = e.target.parentNode;          // ab soch agar click karte hi uss <li> ko hatana ho toh?
+    //    removeIt.remove()
+
+    //    removeIt.parentNode.removeChild(removeIt)
+    
+    // ab agar google anchor tag pe click karoge toh pura <ul> hat jaega kyuki wahi iska parent node hai,
+    // isliye usko prevent karne ke liyye ye IF condition lagaye hain
+
+    console.log(e.target.tagName);
+    if(e.target.tagName === 'IMG'){
+        let removeIt = e.target.parentNode
+        removeIt.remove()
+    }
+
+})
+
+</script>
+</html>
