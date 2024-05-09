@@ -147,14 +147,32 @@ async function consumePromiseFive(){
 
 
 
- async function getAllUsers(){
-    try {
-        const response = fetch("https://jsonplaceholder.typicode.com/users")
-        const data = (await response).json()               //json format me karne ke liy etime lagta hai isliye value nhi aata hai, therefore await lagate hain naaaaaaaa
-        console.log(data);
-    } catch (error) {
-        console.log("E: ", error);
+//  async function getAllUsers(){
+//     try {
+//         const response = fetch("https://jsonplaceholder.typicode.com/users")
+//         const data = (await response).json()               //json format me karne ke liy etime lagta hai isliye value nhi aata hai, therefore await lagate hain naaaaaaaa
+//         console.log(data);
+//     } catch (error) {
+//         console.log("E: ", error);
 
-    }
- }
- getAllUsers()
+//     }
+//  }
+//  getAllUsers()
+
+// same function as try n catch syntax
+
+fetch('https://api.github.com/users/theraaajj')
+.then((response) => {
+    return response.json()
+})
+.then((data) => {
+    console.log(data)
+})
+.catch((error) => {
+    console.log(error)
+})
+
+
+// magar output me ye fetch sbse phle hogya, 
+// aur async wla last me, wo kaise??????
+// tune into the next file 
